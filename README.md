@@ -1,4 +1,4 @@
-# this repo is now read-only and archived
+kilmarnock changed the Dockerfile for implementing a docker healthcheck
 
 # One-Wire Docker-Container
 
