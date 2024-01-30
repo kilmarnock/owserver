@@ -11,7 +11,7 @@ ENV WEB_PORT=2121 \
 
 RUN apt-get update && \
     apt-get upgrade -y && \
-    apt-get install owserver ow-shell owhttpd owftpd -y && \
+    apt-get install owserver ow-shell owhttpd owftpd curl -y && \
     apt-get autoremove -y && \
     apt-get autoclean && \
     rm -rf /var/lib/apt/lists/*
@@ -45,3 +45,5 @@ EXPOSE ${WEB_PORT} ${OWFS_PORT} ${FTP_PORT}
 
 ENTRYPOINT ["/start.sh"]
 #ENTRYPOINT ["/bin/sh"]
+
+HEALTHCHECK CMD curl --fail http://localhost:2121 || exit 1  
