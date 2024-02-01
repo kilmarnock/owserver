@@ -46,4 +46,4 @@ EXPOSE ${WEB_PORT} ${OWFS_PORT} ${FTP_PORT}
 ENTRYPOINT ["/start.sh"]
 #ENTRYPOINT ["/bin/sh"]
 
-HEALTHCHECK CMD curl --fail http://localhost:2121/bus.0/20.5E9736060000 || exit 1  
+HEALTHCHECK CMD curl --fail http://localhost:2121/bus.0/20.5E9736060000 || exit 1
